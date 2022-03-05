@@ -28,6 +28,20 @@ Fuzz tests will be written in Scribble for incremental fuzzing with different to
 
 - Set up Defender Sentinel with TBD Forta Agents and to monitor important functions and traffic.
 - Implement OpenZeppelin Defender Admin for multi-sig functions.
-#### Security Pitfalls to look out for:
 
-- https://github.com/runtimeverification/verified-smart-contracts/wiki/List-of-Security-Vulnerabilities
+#### Suggested workflow:
+
+Unit testing:
+The focus of unit testing is on ensuring positive behaviour of code and building high quality software. They ARE not suited to find security flaws and edge cases. In fact, Trail of Bits has mentioned that unit test coverage had no effect on the number and severity of security flaws in code [here](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/).
+
+Nonetheless our test suite of choice is Foundry enabling faster development and testing in Solidity. Developers should aim for 100% coverage and ensure complicated logic is prioritised should they fail to reach 100% coverage.
+
+Fuzzing:
+
+- Prioritise complicated logic in the code base but aim for 100% coverage.
+- Test with different tools i.e Echidna, Diligence Fuzzing and Foundry's in built fuzzer.
+
+Internal/peer security review:
+
+-  Check for common issues with the [Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)
+-  Look out for security vulnerabilities [listed herein](https://github.com/runtimeverification/verified-smart-contracts/wiki/List-of-Security-Vulnerabilities) 
