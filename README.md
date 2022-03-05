@@ -5,4 +5,4 @@ Listed herein is also what parts of our processes we chose to make public for ex
 By making all of this public, we hope to lead by example and show everyone in the Ethereum security community how to write secure code and indeed to act as a learning point on what not to do should we fail at any point in our mission.
 Contributions from anyone to improve what is listed here is welcome. Anyone can freely adopt our practices as part of their own.
 
-_A lot of the material listed here is based on the [Solidity DevSecOps Standard](https://github.com/morphean-sec/Solidity-DevSecOps-Standard)
+_A lot of the material listed here is based on the [Solidity DevSecOps Standard](https://github.com/morphean-sec/Solidity-DevSecOps-Standard)_
