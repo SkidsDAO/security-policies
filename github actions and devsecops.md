@@ -43,5 +43,17 @@ Fuzzing:
 
 Internal/peer security review:
 
--  Check for common issues with the [Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)
--  Look out for security vulnerabilities [listed herein](https://github.com/runtimeverification/verified-smart-contracts/wiki/List-of-Security-Vulnerabilities) 
+_Modified from Mudit Gupta's review approach._
+
+- Read the project's docs, specs, and whitepaper to understand what the smart contracts are meant to do.
+- Construct a mental model of what you expect the contracts to look like before checking out the code.
+- Run easy to use tools like Slither/Solhint and Mythril then review their output.
+- Glance over the contracts to get a sense of the project's architecture. Solidity Visual Auditor is handy for this and integrates surya. See [here](https://www.youtube.com/watch?v=0FTLC8JnWp0) for an example workflow using the two.
+- Compare the architecture to your mental model. Look into areas that are surprising.
+- Create a threat model and make a list of theoretical high level attack vectors.
+- Look at areas that can do value exchange. Especially functions like transfer, transferFrom, send, call, delegatecall, and selfdestruct. Walk backward from them to ensure they are secured properly.
+- Look at areas that interface with external contracts and ensure all assumptions about them are valid like share price only increases, etc.
+- Do a generic line-by-line review of the contracts whilst looking out for security vulnerabilities [listed herein](https://github.com/runtimeverification/verified-smart-contracts/wiki/List-of-Security-Vulnerabilities) and checking for common issues with the [Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)
+- Do another review from the perspective of every actor in the threat model.
+- Glance over the project's tests + code coverage and look deeper at areas lacking coverage.
+- Look at related projects and their audits to check for any similar issues or oversights.
