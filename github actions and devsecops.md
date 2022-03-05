@@ -28,3 +28,6 @@ Fuzz tests will be written in Scribble for incremental fuzzing with different to
 
 - Set up Defender Sentinel with TBD Forta Agents and to monitor important functions and traffic.
 - Implement OpenZeppelin Defender Admin for multi-sig functions.
+#### Security Pitfalls to look out for:
+
+- https://github.com/runtimeverification/verified-smart-contracts/wiki/List-of-Security-Vulnerabilities
