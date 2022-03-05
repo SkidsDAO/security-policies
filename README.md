@@ -1,4 +1,4 @@
-# Security Policies
+# Security Policies [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 This repo details policies every developer intending to contribute to SkidSec's open source software must follow in order to create highly performant and secure code.
 Listed herein is also what parts of our processes we chose to make public for example our CI/CD pipeline with GitHub Actions soon to follow.
 
